@@ -59,7 +59,7 @@ app=Flask(__name__)
 # In[10]:
 
 
-app.config['SQLALCHEMY_DATABASE_URI']='sqlite:///dataaa.db'
+app.config['SQLALCHEMY_DATABASE_URI']=os.environ.get('DATABASE_URL','sqlite:///dataaa.db')
 
 
 # In[11]:
